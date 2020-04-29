@@ -1,0 +1,892 @@
+{
+  "intents": [
+    {
+      "intent": "prevenir",
+      "examples": [
+        {
+          "text": "É recomendado lavar as mãos?"
+        },
+        {
+          "text": "Quando é recomendado usar máscara?"
+        },
+        {
+          "text": "Eu posso sair de casa?"
+        },
+        {
+          "text": "Não posso nem dar uns pegas na minha mina?"
+        },
+        {
+          "text": "Eu só queria visitar meu colega, tem problema?"
+        },
+        {
+          "text": "Eu vou ter que ficar em casa para me proteger?"
+        },
+        {
+          "text": "Tem algo que eu possa fazer nessa quarentena?"
+        },
+        {
+          "text": "Não posso fazer nada até essa pandemia passar?"
+        },
+        {
+          "text": "Até acabar esse vírus, eu vou ter que ficar em casa sem ver ninguém?"
+        },
+        {
+          "text": "E se eu quiser sair?"
+        },
+        {
+          "text": "Como posso me prevenir?"
+        },
+        {
+          "text": "Como posso me proteger?"
+        },
+        {
+          "text": "O que devo fazer para me proteger do COVID-19?"
+        },
+        {
+          "text": "O que fazer para me prevenir?"
+        },
+        {
+          "text": "Como posso evitar pegar o coronavírus?"
+        },
+        {
+          "text": "Como posso me cuidar para não pegar a COVID-19?"
+        },
+        {
+          "text": "Quais são as recomendações para se proteger?"
+        }
+      ],
+      "description": "Descreve ao usuário o que fazer para se proteger da COVID-19"
+    },
+    {
+      "intent": "diagnostico",
+      "examples": [
+        {
+          "text": "Como o coronavirus é diagnosticado?"
+        },
+        {
+          "text": "como funciona para ver se tenho coronavirus ou não?"
+        },
+        {
+          "text": "como é feito o diagnóstico de infecção por coronavirus?"
+        },
+        {
+          "text": "como é feito o diagnóstico do covid-19?"
+        },
+        {
+          "text": "quais testes são feitos para ver se alguém tem coronavirus?"
+        },
+        {
+          "text": "Qual é o diagnóstico?"
+        },
+        {
+          "text": "Tem alguma forma de saber se contrai a covid19?"
+        }
+      ],
+      "description": "Explica ao usuário como funciona o diagnóstico da COVID-19"
+    },
+    {
+      "intent": "tratamento",
+      "examples": [
+        {
+          "text": "Em caso de confirmação da COVID-19 o que devo fazer para melhorar?"
+        },
+        {
+          "text": "Como é o tratamento?"
+        },
+        {
+          "text": "Quais os procedimentos para se tratar do COVID-19?"
+        },
+        {
+          "text": "Existe cura para o coronavirus?"
+        },
+        {
+          "text": "Tem alguma forma de vacina contra o coronavirus?"
+        },
+        {
+          "text": "Há algum tratamento para o COVID-19?"
+        },
+        {
+          "text": "Existe tratamento para o coronavirus?"
+        }
+      ],
+      "description": "Informa ao usuário informações sobre o tratamento da COVID-19"
+    },
+    {
+      "intent": "descricao",
+      "examples": [
+        {
+          "text": "O que é corona?"
+        },
+        {
+          "text": "Coronga é o que mesmo?"
+        },
+        {
+          "text": "O que é esse tal de corongavirus?"
+        },
+        {
+          "text": "Covid-19 e coronavirus são a mesma coisa?"
+        },
+        {
+          "text": "Poderia me dizer o que exatamente é o COVID-19?"
+        },
+        {
+          "text": "O que sabemos sobre COVID?"
+        },
+        {
+          "text": "O que é o coronavírus?"
+        }
+      ],
+      "description": "explica o que é o COVID-19"
+    },
+    {
+      "intent": "sintomas",
+      "examples": [
+        {
+          "text": "Quais os sintomas de quem contraiu a COVID19?"
+        },
+        {
+          "text": "Que características alguém que pegou coronavirus tem?"
+        },
+        {
+          "text": "Quais características do coronavírus?"
+        },
+        {
+          "text": "Quais são os sintomas relacionados a COVID-19?"
+        },
+        {
+          "text": "Quais sintomas uma pessoa que tem coronavírus pode apresentar?"
+        },
+        {
+          "text": "Quais sintomas pode apresentar alguém com COVID19?"
+        },
+        {
+          "text": "Quem contrai o vírus apresenta quais sintomas?"
+        },
+        {
+          "text": "Quais são as características da COVID-19?"
+        },
+        {
+          "text": "Se eu tiver coronavírus quais sintomas eu deveria apresentar?"
+        },
+        {
+          "text": "Sintomas da COVID19"
+        },
+        {
+          "text": "Sintomas do corongavirus"
+        },
+        {
+          "text": "Estou com tosse seca, é covid19?"
+        },
+        {
+          "text": "Estou tossindo, febre alta e com dificuldade para respirar"
+        },
+        {
+          "text": "Estou me sentindo muito exausto, cansado e com febre, é coronavirus?"
+        },
+        {
+          "text": "Estou com febre alta, devo me preocupar?"
+        }
+      ],
+      "description": "Descreve os sintomas da COVID-19"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "tratamentos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "medicamento",
+          "synonyms": [
+            "remédio"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "vacina",
+          "synonyms": [
+            "cura"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "rosto",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "rosto",
+          "synonyms": [
+            "cabelo",
+            "orelha",
+            "boca",
+            "nariz"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sintomas_especificos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "dores musculares",
+          "synonyms": [
+            "dor no corpo",
+            "corpo dolorido",
+            "corpo ruído",
+            "muita dor no corpo",
+            "dor nos musculos",
+            "musculos doloridos",
+            "musculos cheio de dores",
+            "dores nos musculos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dor de cabeça",
+          "synonyms": [
+            "dores na cabeça",
+            "dor no cocoroco",
+            "dores na cachola"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "congestão",
+          "synonyms": [
+            "congestão nasal",
+            "nariz congestionado",
+            "nariz zuado",
+            "napa zoada",
+            "nariz travado"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dificuldade de respirar",
+          "synonyms": [
+            "problema para respirar",
+            "não conseguir respirar",
+            "respiração dificultada"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cansaço",
+          "synonyms": [
+            "cansasso",
+            "afronta",
+            "exausto",
+            "exaustão",
+            "fadiga",
+            "moleza",
+            "esgotado",
+            "canseira",
+            "cansadão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tosse seca",
+          "synonyms": [
+            "tosse",
+            "peitogueira",
+            "birra seca",
+            "tossindo seco",
+            "seca de uma tosse",
+            "toce seca"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "febre",
+          "synonyms": [
+            "febre alta",
+            "alta temperatura do corpo",
+            "temperatura elevada",
+            "febre elevada"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "atividade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sair",
+          "synonyms": [
+            "visitar",
+            "andar",
+            "passear",
+            "ir",
+            "bater perna",
+            "dar rolê"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tocar",
+          "synonyms": [
+            "encostar",
+            "abraçar",
+            "beijar",
+            "cumprimentar",
+            "apertar",
+            "dar uns amassos",
+            "ficar perto",
+            "dar uns pegas"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tossir",
+          "synonyms": [
+            "espirrar",
+            "tossindo",
+            "espirrando"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lavar",
+          "synonyms": [
+            "limpar",
+            "higienizar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "local",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "lugar",
+          "synonyms": [
+            "shopping",
+            "estádio",
+            "cinema",
+            "igreja",
+            "casa",
+            "prédio",
+            "apê",
+            "cafofo",
+            "rua"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "mascara",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "máscara",
+          "synonyms": [
+            "pano",
+            "mascara de pano"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Para evitar que contraia o vírus, é recomendado que fique em casa"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1587671277823",
+      "conditions": "anything_else",
+      "dialog_node": "response_2_1587672418206",
+      "previous_sibling": "response_7_1587671513256"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Se você tem mais de um dos sintomas comuns como tosse seca, febre alta e dificuldade para respirar , é recomendado que você fique de quarentena ou procure um auxílio médico, tendo cuidado para não propagar o vírus."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1587671277823",
+      "conditions": "@sintomas_especificos",
+      "dialog_node": "response_7_1587671513256"
+    },
+    {
+      "type": "standard",
+      "title": "Sintomas do Usuário",
+      "parent": "node_7_1587670602333",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "#sintomas",
+      "dialog_node": "node_1_1587671277823"
+    },
+    {
+      "type": "standard",
+      "parent": "node_2_1587673852769",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "#tratamento",
+      "dialog_node": "node_5_1587674290078"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1587489370534",
+      "disabled": true,
+      "dialog_node": "response_9_1587489626336",
+      "previous_sibling": "response_9_1587489597327"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para se prevenir, é recomendado que:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1587489370534",
+      "disabled": true,
+      "dialog_node": "response_9_1587489597327",
+      "previous_sibling": "node_8_1587489743280"
+    },
+    {
+      "type": "standard",
+      "title": "Situações",
+      "parent": "node_1_1587489370534",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "#prevenir",
+      "dialog_node": "node_8_1587489743280"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Até o momento não há vacina disponível contra o COVID-19."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1587674290078",
+      "conditions": "@tratamentos:vacina",
+      "dialog_node": "response_2_1587674501898",
+      "previous_sibling": "response_9_1587674306243"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Assim que os primeiros sintomas surgirem, é fundamental procurar ajuda médica imediata para confirmar diagnóstico."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1587674290078",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1587674557466",
+      "previous_sibling": "response_2_1587674501898"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sobre possíveis remédios contra o vírus, existe tratamento disponível que evita o agravamento da doença e reduz o desconforto. No entanto, ainda não há medicamento específico para eliminar o coronavírus."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1587674290078",
+      "conditions": "@tratamentos:medicamento",
+      "dialog_node": "response_9_1587674306243"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Ao tossir ou espirrar, cubra o nariz e boca com lenço ou com o braço, nunca com as mãos."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "@atividade:tossir",
+      "dialog_node": "response_7_1587489900601",
+      "previous_sibling": "response_7_1587489852559"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Evite abraços, beijos e apertos de mão. Adote um comportamento amigável sem contato físico."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "@atividade:tocar",
+      "dialog_node": "response_7_1587490067477",
+      "previous_sibling": "response_7_1587489900601"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Lave com frequência as mãos com água e sabão ou então higienize com álcool em gel 70%.    \nAo tossir ou espirrar, cubra o nariz e boca com lenço ou com o braço, nunca com as mãos.\nEvite tocar olhos, nariz e boca com as mãos não lavadas.\nEvite abraços, beijos e apertos de mão. Adote um comportamento amigável sem contato físico.\nEvite circulação desnecessária nas ruas e, principalmente, locais com aglomeração. Se puder, fique em casa.\nUtilize máscara em situações que precise sair de casa. Caso esteja doente, use máscara o tempo todo."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "anything_else",
+      "dialog_node": "response_4_1587493596196",
+      "previous_sibling": "response_2_1587490331615"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Utilize máscara em situações que precise sair de casa. Caso esteja doente, use máscara o tempo todo."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "@mascara",
+      "dialog_node": "response_2_1587490331615",
+      "previous_sibling": "response_1_1587490124994"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Evite circulação desnecessária nas ruas e, principalmente, locais com aglomeração. Se puder, fique em casa"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "@atividade:sair || @local",
+      "dialog_node": "response_1_1587490124994",
+      "previous_sibling": "response_5_1587489956706"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Evite tocar olhos, nariz e boca com as mãos não lavadas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "@atividade:tocar && @rosto",
+      "dialog_node": "response_5_1587489956706",
+      "previous_sibling": "response_7_1587490067477"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lave com frequência as mãos com água e sabão, ou então higienize com álcool em gel 70%."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1587489743280",
+      "conditions": "@atividade:lavar",
+      "dialog_node": "response_7_1587489852559"
+    },
+    {
+      "type": "standard",
+      "title": "Tratamentos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não existe tratamento específico para infecções causadas por coronavírus humano. É indicado repouso e consumo de bastante água, além de algumas medidas adotadas para aliviar os sintomas, conforme cada caso, como, por exemplo:"
+              },
+              {
+                "text": "Uso de medicamentos para aliviar dores e febre como antitérmicos e analgésicos;"
+              },
+              {
+                "text": "Uso de umidificadores no quarto ou tomar banho quente para auxiliar no alívio da dor de garganta e tosse."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#tratamento",
+      "dialog_node": "node_2_1587673852769",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Sintomas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Os sintomas mais comuns são febre, cansaço e tosse seca. Alguns pacientes podem ter dores musculares, congestão nasal, coriza ou dor de garganta. Esses sintomas, geralmente, são leves e começam gradualmente. Vale ressaltar que algumas pessoas são infectadas, mas não apresentam sintomas e não se sentem mal."
+              },
+              {
+                "text": "Os sintomas mais comuns da COVID-19 são febre, cansaço e tosse seca. Houve alguns relatos de sintomas gastrointestinais como náusea, vômito e diarreia antes da ocorrência de sintomas respiratórios, mas esse é o principalmente um vírus respiratório. Alguns pacientes podem também apresentar dores no corpo, congestão nasal, coriza e dor de garganta. Os sintomas geralmente são leves e começam gradualmente."
+              },
+              {
+                "text": "Na maioria dos casos, a doença é sem gravidade e os sintomas do coronavírus são febre, tosse, dificuldade para respirar, dores musculares, dor de cabeça e dor de garganta. Na forma grave, que acomete cerca de um quarto dos infectados, há uma piora do quadro respiratório, com desenvolvimento de pneumonia, podem levar à insuficiência respiratória."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#sintomas",
+      "dialog_node": "node_7_1587670602333",
+      "previous_sibling": "node_8_1587669196535"
+    },
+    {
+      "type": "standard",
+      "title": "Recomendações de Proteção",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para se prevenir, é recomendado que:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#prevenir",
+      "dialog_node": "node_1_1587489370534",
+      "previous_sibling": "node_4_1587673511694"
+    },
+    {
+      "type": "standard",
+      "title": "Diagnóstico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O diagnóstico do coronavírus é feito por meio da coleta de materiais respiratórios de pacientes classificados como casos suspeitos de COVID-19. As amostras são encaminhadas para os Laboratórios Centrais de Saúde Pública dos estados para realização de exames de biologia molecular para detecção do RNA do vírus."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "#diagnostico",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1587673511694",
+      "previous_sibling": "node_7_1587670602333"
+    },
+    {
+      "type": "standard",
+      "title": "Descrição",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Coronavírus é uma família de vírus que causam infecções respiratórias. O novo agente do coronavírus, o COVID-19 foi descoberto em 31 de Dezembro de 2019 após casos registrados na China. "
+              },
+              {
+                "text": "O coronavírus, causador da pandemia global, pertence a uma família de vírus, chamada CoV ,que já circula no Brasil. O novo coronavírus recebeu a denomição SARS-CoV-2 pela OMS, a Organização Mundial da Saúde, e a doença que ele provoca tem a denominação COVID-19."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "#descricao",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1587669196535",
+      "previous_sibling": "node_2_1587673852769"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_1_1587489370534",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, sou o CoronaBot. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "CoronaFAQ",
+  "language": "pt-br",
+  "description": ""
+}
